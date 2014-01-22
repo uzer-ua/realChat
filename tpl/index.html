@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Expires" content="Fri, Jan 01 1900 00:00:00 GMT">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Lang" content="ru">
+<title>Forsage</title>
+<link rel="stylesheet" type="text/css" href="/css/index.css">
+<script type="text/javascript" language="JavaScript">
+me = {
+	id:'{id}',
+	uid:'{uid}',
+	name:'{name}',
+	first_name:'{first_name}',
+	last_name:'{last_name}',
+	photo:'{photo}',
+	settings:'{settings}',
+};
+</script>
+<script type="text/javascript" language="JavaScript" src="/js/jquery.js"></script>
+<script type="text/javascript" language="JavaScript" src="/js/realplexor.js"></script>
+<script type="text/javascript" language="JavaScript" src="/js/index.js?{t}"></script>
+</head>
+<body>
+	<div id="content">
+		<div id="messages" style="text-align:center;">
+			<img id="loader" src="img/loaderw.gif"/>
+		</div>
+		<div class="users">
+			<div id="users"></div>
+		</div>
+		<div id="nmessage">
+			<div id="settings">
+				<a href="" id="mtype" title="Message send: Ctrl+Enter" onClick="chat.toggleM(this);return false"><b>@</b></a><!--8-->
+				<a href="" title="Notification settings" onClick="notifier.settings();return false"><b>^</b></a>
+			</div>
+			<textarea type="text" id="messaget" name="messaget" placeholder="Enter your message..."></textarea>
+			<span id="actions">
+			<img src="img/smile.png" id="smilies" onClick="messages.showSmilies()" title="Smilies"><img src="img/img.gif" id="attach" onClick="messages.attach()" title="Attach image" style="display:none;" /><input type="file" id="attacher" onChange="messages.attach(this)" title="Attach image" style="display:none;" /><br/>
+			<button id="send" onClick="chat.send();">Send</button>
+			</span>
+			<br/><div id="attachments" style="display:none"></div><div id="copyright">© <a href="http://vk.com/id2262816" target="_new">UZER</a>, "Forsage"</div>
+		</div>
+		<div id="adb"><b>Here could be your advertisement.</b></div>
+	</div>
+	<div id="hider"></div>
+	<div id="smiliesList" style="display:none"></div>
+	<div id="nsettings" style="display:none">
+		<img class="close" src="img/close.gif" onClick="notifier.closes()" />
+		<ul class="tabs">
+			<li tid="tab1">Notifications</li>
+		</ul>
+		<div id="tab1">
+			<table>
+			<tr>
+				<td><b>Incoming message:</b></td>
+				<td>
+					<a href="" id="anotif1" sid="a1" title="Sound" onClick="notifier.toggleA(this);return false"><b>X</b></a>
+					<select id="a1s" sid="a1" onChange="notifier.updateA(this)" style="display:none">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+					</select>
+					<a href="" id="snotif1"  sid="s1" title="Popup message" onClick="notifier.toggleS(this);return false"><b>^</b></a>
+				</td>
+			</tr>
+			<tr>
+				<td><b>Message send:</b></td>
+				<td>
+					<a href="" id="anotif2" sid="a2" title="Sound" onClick="notifier.toggleA(this);return false"><b>X</b></a>
+					<select id="a2s" sid="a2" onChange="notifier.updateA(this)" style="display:none">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+					</select>
+					<a href="" id="snotif2" sid="s2" title="Popup message" onClick="notifier.toggleS(this);return false" style="visibility:hidden;"><b>^</b></a>
+				</td>
+			</tr>
+			<tr>
+				<td><b>Online-status change:</b></td>
+				<td>
+					<a href="" id="anotif3" sid="a3" title="Sound" onClick="notifier.toggleA(this);return false"><b>X</b></a>
+					<select id="a3s" sid="a3" onChange="notifier.updateA(this)" style="display:none">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+					</select>
+					<a href="" id="snotif3" sid="s3" title="Popup message" onClick="notifier.toggleS(this);return false"><b>^</b></a>
+				</td>
+			</tr>
+			</table>
+		</div>
+	</div>
+	<audio style="display:none" id="an1" preload="auto"></audio>
+	<audio style="display:none" id="an2" preload="auto"></audio>
+	<audio style="display:none" id="an3" preload="auto"></audio>
+	<audio id="pre" style="display:none" preload="auto"></audio>
+</body>
+</html>
